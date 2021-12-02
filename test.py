@@ -1,10 +1,14 @@
-from typing import Sequence
+from typing import List
 
 
-def lower_join(seq: Sequence) -> str:
-    """Принимает на вход последовательность и создаёт из неё  
-    строку в нижнем регистре."""
-    return ''.join(seq).lower()
+def series_sum(incoming: List):
+    """Принимает на вход список, приводит его элементы к строкам
+    и конкатенирует их.
+    """
+    result = ''
+    for i in incoming:
+        result += str(i)
+    return result
 
 
-print(lower_join(25))
+print(series_sum('Привет'))
